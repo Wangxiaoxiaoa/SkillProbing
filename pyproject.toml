@@ -1,0 +1,13 @@
+[project]
+name = "skillprobing"
+version = "0.1.0"
+description = "探测技能(skill)能力是否被大模型内置: 从智能体截获每次 LLM 输入/输出,分析 skill 存在与否下输出 logits 熵变化"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/skillprobing"]
+
+[project.scripts]
+skillprobing = "skillprobing.cli:main"
