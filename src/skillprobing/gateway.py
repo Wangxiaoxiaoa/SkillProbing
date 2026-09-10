@@ -16,6 +16,8 @@ class GatewayConfig:
     api_key: str = ""
     record_out: str | None = None
     listen: str = "127.0.0.1:5909"
+    logprobs: int = 8          # 每个token要的topK logprobs; 0=不注入
+    stream: bool = False       # 转发时强制为False以拿到完整logprobs(否则流式响应无logprobs)
 
 
 def _append(path: str, rec: dict) -> None:
@@ -35,7 +37,27 @@ def record_trace(cfg: GatewayConfig, method, path, req_json, status, resp_obj):
     return rec
 
 
-def forward(upstream, req_path, method, headers, body, api_key=""):
+def _inject_logprobs(req_json: dict, topn: int, stream: bool) -> dict:
+    """给请求注入 logprobs / top_logprobs, 并转成非流式(以便拿到完整logprobs)。"""
+    if not isinstance(req_json, dict):
+        return req_json
+    body = dict(req_json)
+    if topn > 0:
+        body["logprobs"] = True
+        body["top_logprobs"] = topn
+    if not stream:
+        body["stream"] = False
+    return body
+
+
+def forward(upstream, req_path, method, headers, body, api_key="", logprobs=0, stream=False):
+    req_text = body.decode("utf-8", errors="replace") if isinstance(body, (bytes, bytearray)) else body
+    try:
+        req_json = json.loads(req_text) if req_text else {}
+    except Exception:
+        req_json = {}
+    req_json = _inject_logprobs(req_json, logprobs, stream) if method.upper() == "POST" else req_json
+    new_body = json.dumps(req_json).encode() if req_json else None
     url = upstream.rstrip("/") + req_path
     hdrs = {k: v for k, v in (headers or {}).items()
             if k.lower() not in ("host", "content-length", "accept-encoding")}
@@ -45,9 +67,9 @@ def forward(upstream, req_path, method, headers, body, api_key=""):
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
-    req = urllib.request.Request(url, data=body or None, headers=hdrs, method=method)
+    req = urllib.request.Request(url, data=new_body or None, headers=hdrs, method=method)
     try:
-        with urllib.request.urlopen(req, context=ctx, timeout=600) as resp:
+        with urllib.request.urlopen(req, context=ctx, timeout=900) as resp:
             return {"status": resp.status, "content": resp.read(), "headers": dict(resp.headers)}
     except urllib.error.HTTPError as exc:
         return {"status": exc.code, "content": exc.read(), "headers": dict(exc.headers), "error": str(exc)}
@@ -71,7 +93,8 @@ class _Handler(BaseHTTPRequestHandler):
         except Exception:
             req_json = {}
         result = forward(self._cfg.upstream_base_url, self.path, self.command,
-                         dict(self.headers), body, api_key=self._cfg.api_key)
+                         dict(self.headers), body, api_key=self._cfg.api_key,
+                         logprobs=self._cfg.logprobs, stream=self._cfg.stream)
         self.send_response(result["status"])
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(result["content"])))
@@ -94,8 +117,10 @@ class _Handler(BaseHTTPRequestHandler):
         self._dispatch()
 
 
-def run_gateway_server(*, listen="127.0.0.1:5909", upstream, api_key="", record_path):
-    cfg = GatewayConfig(upstream_base_url=upstream, api_key=api_key, record_out=record_path, listen=listen)
+def run_gateway_server(*, listen="127.0.0.1:5909", upstream, api_key="", record_path,
+                       logprobs=8, stream=False):
+    cfg = GatewayConfig(upstream_base_url=upstream, api_key=api_key, record_out=record_path,
+                        listen=listen, logprobs=logprobs, stream=stream)
     _Handler._cfg = cfg
     host, port = listen.split(":")
     srv = ThreadingHTTPServer((host, int(port)), _Handler)
