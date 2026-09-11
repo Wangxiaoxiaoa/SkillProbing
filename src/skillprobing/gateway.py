@@ -58,7 +58,10 @@ def forward(upstream, req_path, method, headers, body, api_key="", logprobs=0, s
         req_json = {}
     req_json = _inject_logprobs(req_json, logprobs, stream) if method.upper() == "POST" else req_json
     new_body = json.dumps(req_json).encode() if req_json else None
-    url = upstream.rstrip("/") + req_path
+    base = upstream.rstrip("/")
+    if base.endswith("/v1") and req_path.startswith("/v1"):
+        base = base[:-3]
+    url = base + req_path
     hdrs = {k: v for k, v in (headers or {}).items()
             if k.lower() not in ("host", "content-length", "accept-encoding")}
     hdrs["Content-Type"] = "application/json"
