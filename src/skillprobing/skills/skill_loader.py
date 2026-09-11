@@ -28,13 +28,14 @@ class TaskSpec:
 
 def load_task_dir(task_dir: Path) -> TaskSpec:
     """从单个已抽取任务目录加载 TaskSpec。"""
-    skill_names = [p.name for p in sorted((task_dir / "skills").iterdir()) if p.is_dir()] \
-        if (task_dir / "skills").is_dir() else []
+    # 优先使用保留的 environment/skills/; 不存在则回退到旧 skills/
+    skills_dir = task_dir / "environment" / "skills" if (task_dir / "environment" / "skills").is_dir() else task_dir / "skills"
+    skill_names = [p.name for p in sorted(skills_dir.iterdir()) if p.is_dir()] if skills_dir.is_dir() else []
     return TaskSpec(
         task_id=task_dir.name,
         dir=task_dir,
         prompt=_task_text(task_dir),
-        skills_dir=task_dir / "skills",
+        skills_dir=skills_dir,
         verifier_dir=task_dir / "verifier",
         input_dir=task_dir / "input",
         skill_names=skill_names,
@@ -62,12 +63,22 @@ def extract_tasks(cfg: SkillsConfig, task_ids: list[str] | None = None) -> list[
         dest_task = dest_root / task_id
         dest_task.mkdir(parents=True, exist_ok=True)
 
-        # 1) skills
-        src_skill = task_dir / "environment" / "skills"
-        skill_names: list[str] = []
-        if src_skill.is_dir():
-            shutil.copytree(src_skill, dest_task / "skills", dirs_exist_ok=True)
-            skill_names = [p.name for p in sorted(src_skill.iterdir()) if p.is_dir()]
+        # 1) 保留完整 environment/ 目录(含 Dockerfile、skills、输入文件)
+        src_env = task_dir / "environment"
+        dst_env = dest_task / "environment"
+        if src_env.is_dir():
+            shutil.copytree(src_env, dst_env, dirs_exist_ok=True)
+        # 向后兼容: 同时保留 input/ 作为输入文件副本
+        dst_input = dest_task / "input"
+        if src_env.is_dir():
+            for f in src_env.iterdir():
+                if f.name in ("skills", "Dockerfile") or f.is_dir():
+                    continue
+                dst_input.mkdir(parents=True, exist_ok=True)
+                shutil.copy(f, dst_input / f.name)
+        # 同时保留顶层 skills/ 副本,兼容 load_task_dir 旧路径
+        if (dst_env / "skills").is_dir():
+            shutil.copytree(dst_env / "skills", dest_task / "skills", dirs_exist_ok=True)
 
         # 2) task.md
         if (task_dir / "task.md").exists():
@@ -83,21 +94,16 @@ def extract_tasks(cfg: SkillsConfig, task_ids: list[str] | None = None) -> list[
             shutil.copytree(task_dir / "oracle", dest_task / "oracle", dirs_exist_ok=True)
             oracle_path = dest_task / "oracle"
 
-        # 5) 输入文件(env 非 skills/Dockerfile 的文件)
-        src_env = task_dir / "environment"
-        dst_input = dest_task / "input"
-        if src_env.is_dir():
-            for f in src_env.iterdir():
-                if f.name in ("skills", "Dockerfile") or f.is_dir():
-                    continue
-                dst_input.mkdir(parents=True, exist_ok=True)
-                shutil.copy(f, dst_input / f.name)
+        skill_names: list[str] = []
+        skills_dir = dst_env / "skills" if (dst_env / "skills").is_dir() else dest_task / "skills"
+        if skills_dir.is_dir():
+            skill_names = [p.name for p in sorted(skills_dir.iterdir()) if p.is_dir()]
 
         out.append(TaskSpec(
             task_id=task_id,
             dir=dest_task,
             prompt=_task_text(dest_task),
-            skills_dir=dest_task / "skills",
+            skills_dir=skills_dir,
             verifier_dir=dest_task / "verifier",
             input_dir=dest_task / "input",
             skill_names=skill_names,

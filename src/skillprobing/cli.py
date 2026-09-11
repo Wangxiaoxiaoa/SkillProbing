@@ -69,6 +69,27 @@ def _cmd_gateway(args) -> int:
     return 0
 
 
+def _cmd_docker_run(args) -> int:
+    from pathlib import Path
+    from skillprobing.runner.docker_runner import run_with_and_without_skill
+
+    task_dir = Path(args.task_dir)
+    out = Path(args.output)
+    r_with, r_without = run_with_and_without_skill(
+        task_dir, out,
+        gateway_url=args.gateway or "http://127.0.0.1:5909/v1",
+        timeout=args.timeout,
+    )
+    print(f"with_skill: rc={r_with.returncode} workspace={r_with.workspace}")
+    print(f"without_skill: rc={r_without.returncode} workspace={r_without.workspace}")
+    if r_with.verifier:
+        print(f"with verifier: passed={r_with.verifier.passed} detail={r_with.verifier.detail}")
+    if r_without.verifier:
+        print(f"without verifier: passed={r_without.verifier.passed} detail={r_without.verifier.detail}")
+    print(f"logs: {out}/with_skill/container.stdout (stderr)")
+    return 0
+
+
 def _build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="skillprobing")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -91,6 +112,13 @@ def _build_parser() -> argparse.ArgumentParser:
     pr.add_argument("--task-dir", "-t", dest="custom_root", default=None, help="用户自定义任务目录")
     pr.add_argument("tasks", nargs="*")
     pr.set_defaults(func=_cmd_run)
+
+    pd = sub.add_parser("docker-run", help="在 Docker 容器内运行 task(与 skillsbench 对齐)")
+    pd.add_argument("--task-dir", "-t", required=True, help="任务目录")
+    pd.add_argument("--gateway", "-g", default="http://127.0.0.1:5909/v1", help="网关URL")
+    pd.add_argument("--output", "-o", default="outputs/docker_run", help="输出目录")
+    pd.add_argument("--timeout", type=int, default=600, help="单个容器超时(秒)")
+    pd.set_defaults(func=_cmd_docker_run)
 
     pv = sub.add_parser("validate", help="生成对照表: 熵判断结果 vs verifier金标准(两者独立)")
     pv.add_argument("--task-dir", "-t", required=True, help="已抽取任务目录")
