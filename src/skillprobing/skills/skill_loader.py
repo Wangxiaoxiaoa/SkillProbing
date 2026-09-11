@@ -22,7 +22,25 @@ class TaskSpec:
     verifier_dir: Path         # 判题脚本(独立)
     input_dir: Path            # 输入文件
     skill_names: list[str]
-    oracle_path: Path | None
+    skill_id: str | None = None   # 主要 skill 名称(用于表格展示)
+    oracle_path: Path | None = None
+
+
+def load_task_dir(task_dir: Path) -> TaskSpec:
+    """从单个已抽取任务目录加载 TaskSpec。"""
+    skill_names = [p.name for p in sorted((task_dir / "skills").iterdir()) if p.is_dir()] \
+        if (task_dir / "skills").is_dir() else []
+    return TaskSpec(
+        task_id=task_dir.name,
+        dir=task_dir,
+        prompt=_task_text(task_dir),
+        skills_dir=task_dir / "skills",
+        verifier_dir=task_dir / "verifier",
+        input_dir=task_dir / "input",
+        skill_names=skill_names,
+        skill_id=skill_names[0] if skill_names else task_dir.name,
+        oracle_path=task_dir / "oracle" if (task_dir / "oracle").is_dir() else None,
+    )
 
 
 def extract_tasks(cfg: SkillsConfig, task_ids: list[str] | None = None) -> list[TaskSpec]:
@@ -83,6 +101,7 @@ def extract_tasks(cfg: SkillsConfig, task_ids: list[str] | None = None) -> list[
             verifier_dir=dest_task / "verifier",
             input_dir=dest_task / "input",
             skill_names=skill_names,
+            skill_id=skill_names[0] if skill_names else task_id,
             oracle_path=oracle_path,
         ))
     return out
@@ -96,18 +115,7 @@ def load_local_tasks(cfg: SkillsConfig) -> list[TaskSpec]:
     for task_dir in sorted(cfg.skills_dir.iterdir()):
         if not task_dir.is_dir():
             continue
-        skill_names = [p.name for p in sorted((task_dir / "skills").iterdir()) if p.is_dir()] \
-            if (task_dir / "skills").is_dir() else []
-        out.append(TaskSpec(
-            task_id=task_dir.name,
-            dir=task_dir,
-            prompt=_task_text(task_dir),
-            skills_dir=task_dir / "skills",
-            verifier_dir=task_dir / "verifier",
-            input_dir=task_dir / "input",
-            skill_names=skill_names,
-            oracle_path=task_dir / "oracle" if (task_dir / "oracle").is_dir() else None,
-        ))
+        out.append(load_task_dir(task_dir))
     return out
 
 

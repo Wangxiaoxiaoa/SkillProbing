@@ -4,3 +4,7 @@ __pycache__/
 venv/
 node_modules/
 .output_ignore/
+outputs/
+*.jsonl
+.verification_workspace/
+.verify_workspace/
