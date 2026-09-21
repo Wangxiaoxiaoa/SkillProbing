@@ -1,0 +1,602 @@
+[
+  {
+    "task_id": "3d-scan-calc",
+    "skill": "mesh-analysis",
+    "trace_head": "import sys\n# Add skill path to sys.path\nsys.path.append('/root/.claude/skills/mesh-analysis/scripts')\n\nfrom mesh_tool im",
+    "n_identifiers": 8
+  },
+  {
+    "task_id": "ada-bathroom-plan-repair",
+    "skill": "ada-plan-view-accessibility",
+    "trace_head": "",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "adaptive-cruise-control",
+    "skill": "csv-processing",
+    "trace_head": "# Statistics\nmean_val = df['column'].mean()\nmax_val = df['column'].max()\nmin_val = df['column'].min()\nstd_val = df['colu",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "azure-bgp-oscillation-route-leak",
+    "skill": "azure-bgp",
+    "trace_head": "pref = {asn: prefer_via_asn, ...}\n\ndef find_cycle(start):\n    path = []\n    seen = {}\n    cur = start\n    while cur in p",
+    "n_identifiers": 2
+  },
+  {
+    "task_id": "bike-rebalance",
+    "skill": "geospatial-routing-data",
+    "trace_head": "import math\n\ndef great_circle_miles(a, b, radius=3960.0):\n    lat1 = float(a[\"latitude\"])\n    lon1 = float(a[\"longitude\"",
+    "n_identifiers": 10
+  },
+  {
+    "task_id": "citation-check",
+    "skill": "citation-management",
+    "trace_head": "# Step 1: Find key papers on your topic\npython scripts/search_google_scholar.py \"transformer neural networks\" \\\n  --year",
+    "n_identifiers": 13
+  },
+  {
+    "task_id": "civ6-adjacency-optimizer",
+    "skill": "civ6lib",
+    "trace_head": "from civ6lib import (\n    # Placement\n    DistrictType, Tile, PlacementRules, get_placement_rules,\n    validate_district",
+    "n_identifiers": 14
+  },
+  {
+    "task_id": "court-form-filling",
+    "skill": "pdf",
+    "trace_head": "from reportlab.lib.pagesizes import letter\nfrom reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBrea",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "crystallographic-wyckoff-position-analysis",
+    "skill": "pymatgen",
+    "trace_head": "from mp_api.client import MPRester\nfrom pymatgen.analysis.phase_diagram import PhaseDiagram, PDPlotter\n\n# Get entries fr",
+    "n_identifiers": 13
+  },
+  {
+    "task_id": "dapt-intrusion-detection",
+    "skill": "pcap-analysis",
+    "trace_head": "# RECOMMENDED: Use the helper function\nfrom pcap_utils import detect_port_scan\nhas_port_scan = detect_port_scan(tcp_pack",
+    "n_identifiers": 36
+  },
+  {
+    "task_id": "data-to-d3",
+    "skill": "d3-visualization",
+    "trace_head": "dist/\n  chart.html        # standalone HTML with inline or linked JS/CSS\n  chart.svg         # exported SVG (optional bu",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "debug-trl-grpo",
+    "skill": "grpo",
+    "trace_head": "1. Sample G completions per prompt from current policy\n2. Decode completions to text\n3. Score completions with reward fu",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "dialogue-parser",
+    "skill": "dialogue-graph",
+    "trace_head": "# Requires: pip install graphviz\n# Also requires Graphviz binary: https://graphviz.org/download/\n\ngraph.visualize('dialo",
+    "n_identifiers": 2
+  },
+  {
+    "task_id": "drone-planning-control",
+    "skill": "attitude-controller-planner",
+    "trace_head": "att_integral = make_attitude_integral()   # once before the loop\n\nfor iter_ in range(max_iter - 1):\n    ...\n    desired_",
+    "n_identifiers": 11
+  },
+  {
+    "task_id": "dynamic-object-aware-egomotion",
+    "skill": "dyn-object-masks",
+    "trace_head": "warped_prev = cv2.warpAffine(prev_gray, M, (W,H), flags=cv2.INTER_LINEAR, borderValue=0)\nvalid = cv2.warpAffine(np.ones(",
+    "n_identifiers": 6
+  },
+  {
+    "task_id": "earthquake-phase-association",
+    "skill": "gamma-phase-associator",
+    "trace_head": "from gamma.utils import estimate_eps\n\n# Assuming stations DataFrame is already prepared with x(km), y(km), z(km) columns",
+    "n_identifiers": 6
+  },
+  {
+    "task_id": "earthquake-plate-calculation",
+    "skill": "geospatial-analysis",
+    "trace_head": "import geopandas as gpd\nfrom shapely.geometry import Point\n\n# 1. Load data\nearthquakes_data = [...]  # Your earthquake d",
+    "n_identifiers": 32
+  },
+  {
+    "task_id": "econ-detrending-correlation",
+    "skill": "timeseries-detrending",
+    "trace_head": "import pandas as pd\nimport numpy as np\nfrom statsmodels.tsa.filters.hp_filter import hpfilter\n\n# Load real (inflation-ad",
+    "n_identifiers": 15
+  },
+  {
+    "task_id": "edit-pdf",
+    "skill": "pdf-editing",
+    "trace_head": "import fitz\n\ndoc = fitz.open(\"input.pdf\")\npage = doc[0]\n\n# 1. First find what value is in the PDF by reading the text\npd",
+    "n_identifiers": 11
+  },
+  {
+    "task_id": "energy-ac-optimal-power-flow",
+    "skill": "ac-branch-pi-model",
+    "trace_head": "import json\nimport numpy as np\n\nfrom scripts.branch_flows import compute_branch_flows_pu, build_bus_id_to_idx\n\ndata = js",
+    "n_identifiers": 11
+  },
+  {
+    "task_id": "energy-market-pricing",
+    "skill": "dc-power-flow",
+    "trace_head": "# Run: scripts/build_b_matrix.py\n# Or inline:\nbus_num_to_idx = {int(buses[i, 0]): i for i in range(n_bus)}\nB = np.zeros(",
+    "n_identifiers": 3
+  },
+  {
+    "task_id": "energy-unit-commitment",
+    "skill": "milp-solver-workflow",
+    "trace_head": "offset = {}\nn = 0\n\ndef alloc(name, shape, lb=0.0, ub=float(\"inf\"), integer=False):\n    global n\n    size = int(np.prod(s",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "enterprise-information-search",
+    "skill": "enterprise-artifact-search",
+    "trace_head": "Task(subagent_type=\"enterprise-artifact-search\", prompt=\"\"\"\nDataset root: /root/DATA\nQuestion: <paste the question verba",
+    "n_identifiers": 3
+  },
+  {
+    "task_id": "exam-block-sequencing",
+    "skill": "mip-solver-and-solution-audit",
+    "trace_head": "from pyscipopt import Model, quicksum\n\nmodel = Model(\"mip_model\")\nmodel.setParam(\"limits/time\", 600.0)\n\n# create binary/",
+    "n_identifiers": 8
+  },
+  {
+    "task_id": "exceltable-in-ppt",
+    "skill": "pptx",
+    "trace_head": "# Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides ha",
+    "n_identifiers": 1
+  },
+  {
+    "task_id": "exoplanet-detection-period",
+    "skill": "box-least-squares",
+    "trace_head": "import numpy as np\nimport matplotlib.pyplot as plt\nimport astropy.units as u\nfrom astropy.timeseries import BoxLeastSqua",
+    "n_identifiers": 19
+  },
+  {
+    "task_id": "financial-modeling-qa",
+    "skill": "pdf",
+    "trace_head": "from reportlab.lib.pagesizes import letter\nfrom reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBrea",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "fix-build-agentops",
+    "skill": "analyze-ci",
+    "trace_head": "# Analyze all failed jobs in a PR\nuv run skills analyze-ci <pr_url>\n\n# Analyze specific job URLs directly\nuv run skills ",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "fix-build-google-auto",
+    "skill": "maven-build-lifecycle",
+    "trace_head": "1.  validate      - Validate project structure\n2.  initialize    - Initialize build state\n3.  generate-sources\n4.  proce",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "fix-druid-loophole-cve",
+    "skill": "jackson-security",
+    "trace_head": "1. HTTP request arrives with JSON body\n2. Framework deserializes JSON → Java object (Jackson runs here)\n3. Your code rec",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "fix-erlang-ssh-cve",
+    "skill": "erlang-concurrency",
+    "trace_head": "1. **Create processes liberally** as they are lightweight and cheap to spawn\n2. **Use message passing exclusively** for ",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "fix-visual-stability",
+    "skill": "browser-testing",
+    "trace_head": "BAD (sequential - each waits for previous):\n  /api/products    |████████|                        512ms\n  /api/featured  ",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "flink-query",
+    "skill": "pdf",
+    "trace_head": "from reportlab.lib.pagesizes import letter\nfrom reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBrea",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "flood-risk-analysis",
+    "skill": "flood-detection",
+    "trace_head": "flood_results = []\n\nfor site_id, site_data in all_data.items():\n    daily_max = site_data['water_levels'].resample('D').",
+    "n_identifiers": 18
+  },
+  {
+    "task_id": "glm-lake-mendota",
+    "skill": "glm-basics",
+    "trace_head": "import re\n\ndef modify_nml(nml_path, params):\n    with open(nml_path, 'r') as f:\n        content = f.read()\n    for param",
+    "n_identifiers": 6
+  },
+  {
+    "task_id": "gravitational-wave-detection",
+    "skill": "conditioning",
+    "trace_head": "from pycbc.psd import interpolate, inverse_spectrum_truncation\n\n# Estimate PSD using Welch's method\n# seg_len: segment l",
+    "n_identifiers": 9
+  },
+  {
+    "task_id": "grid-dispatch-operator",
+    "skill": "dc-power-flow",
+    "trace_head": "# Run: scripts/build_b_matrix.py\n# Or inline:\nbus_num_to_idx = {int(buses[i, 0]): i for i in range(n_bus)}\nB = np.zeros(",
+    "n_identifiers": 3
+  },
+  {
+    "task_id": "hvac-control",
+    "skill": "excitation-signal-design",
+    "trace_head": "# Example data collection pattern\ndata = []\nfor step in range(num_steps):\n    result = system.step(input_value)\n    data",
+    "n_identifiers": 2
+  },
+  {
+    "task_id": "invoice-fraud-detection",
+    "skill": "fuzzy-match",
+    "trace_head": "clean_names = [\"Google LLC\", \"Microsoft Corp\", \"Apple Inc\"]\ndirty_names = [\"google\", \"Microsft\", \"Apple\"]\n\nresults = {}\n",
+    "n_identifiers": 6
+  },
+  {
+    "task_id": "jax-computing-basics",
+    "skill": "jax-skills",
+    "trace_head": "import jax.numpy as jnp\nimport jax_skills as jx\n\n# Load array\narr = jx.load(\"data.npy\")\n\n# Square elements\narr2 = jx.map",
+    "n_identifiers": 10
+  },
+  {
+    "task_id": "jpg-ocr-stat",
+    "skill": "image-ocr",
+    "trace_head": "import pytesseract\nfrom PIL import Image\nimport json\nimport os\n\ndef ocr_to_json(image_path):\n    \"\"\"Perform OCR and retu",
+    "n_identifiers": 27
+  },
+  {
+    "task_id": "lab-unit-harmonization",
+    "skill": "lab-unit-harmonization",
+    "trace_head": "def convert_unit_if_needed(value, column, reference_ranges, conversion_factors):\n    \"\"\"\n    If value is outside expecte",
+    "n_identifiers": 16
+  },
+  {
+    "task_id": "lake-warming-attribution",
+    "skill": "contribution-analysis",
+    "trace_head": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.linear_model import",
+    "n_identifiers": 37
+  },
+  {
+    "task_id": "latex-formula-extraction",
+    "skill": "marker",
+    "trace_head": "# Basic conversion (prints markdown to stdout)\npython scripts/marker_to_markdown.py paper.pdf\n\n# Keep temporary files\npy",
+    "n_identifiers": 3
+  },
+  {
+    "task_id": "lean4-proof",
+    "skill": "lean4-memories",
+    "trace_head": "# Find similar proofs\nsearch_entities(\n  query=\"condExp equality goal\",\n  filters={\"project\": current_project, \"entity_t",
+    "n_identifiers": 13
+  },
+  {
+    "task_id": "llm-prefix-cache-replay",
+    "skill": "cache-policy-comparison",
+    "trace_head": "from collections import OrderedDict\n\nclass LRU:\n    def __init__(self, capacity):\n        self.capacity = capacity\n     ",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "manufacturing-codebook-normalization",
+    "skill": "manufacturing-failure-reason-codebook-normalization",
+    "trace_head": "",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "manufacturing-equipment-maintenance",
+    "skill": "reflow-machine-maintenance-guidance",
+    "trace_head": "#Suggest to get a config object from the handbook and use it for all computations.\ncfg = {\n#   temperature region for th",
+    "n_identifiers": 12
+  },
+  {
+    "task_id": "manufacturing-fjsp-optimization",
+    "skill": "fjsp-baseline-repair-with-downtime-and-policy",
+    "trace_head": "#A naive “always keep baseline machine” can cause large start shifts. This often reduces `Shift_L1` enough to pass tight",
+    "n_identifiers": 6
+  },
+  {
+    "task_id": "mario-coin-counting",
+    "skill": "ffmpeg-keyframe-extraction",
+    "trace_head": "ffmpeg -i <input_video> -vf \"select='eq(pict_type,I)'\" -vsync vfr <output_pattern>\nMethod 2: Skip Frame (Faster)\n\nffmpeg",
+    "n_identifiers": 14
+  },
+  {
+    "task_id": "mars-clouds-clustering",
+    "skill": "custom-distance-metrics",
+    "trace_head": "def create_weighted_distance(weight_x, weight_y):\n    \"\"\"Create a distance function with specific weights.\"\"\"\n    def di",
+    "n_identifiers": 11
+  },
+  {
+    "task_id": "multilingual-video-dubbing",
+    "skill": "ffmpeg-audio-processing",
+    "trace_head": "# Replace audio track\nffmpeg -i video.mp4 -i audio.mp3 -c:v copy -map 0:v:0 -map 1:a:0 output.mp4\n\n# Mix two audio track",
+    "n_identifiers": 2
+  },
+  {
+    "task_id": "offer-letter-generator",
+    "skill": "docx",
+    "trace_head": "import re\nfrom docx import Document\n\ndef replace_all_placeholders(doc, data):\n    \"\"\"Replace all {{KEY}} placeholders wi",
+    "n_identifiers": 18
+  },
+  {
+    "task_id": "organize-messy-files",
+    "skill": "docx",
+    "trace_head": "# BAD - Replaces entire sentence\n'<w:del><w:r><w:delText>The term is 30 days.</w:delText></w:r></w:del><w:ins><w:r><w:t>",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "paper-anonymizer",
+    "skill": "academic-pdf-redaction",
+    "trace_head": "import fitz\nimport os\n\ndef redact_with_pymupdf(input_path: str, output_path: str, patterns: list[str]):\n    \"\"\"Redact sp",
+    "n_identifiers": 23
+  },
+  {
+    "task_id": "parallel-tfidf-search",
+    "skill": "memory-optimization",
+    "trace_head": "What's consuming memory?\n\nLarge collections:\n├── List of objects → __slots__, namedtuple, or dataclass(slots=True)\n├── L",
+    "n_identifiers": 3
+  },
+  {
+    "task_id": "paratransit-routing",
+    "skill": "ortools-pickup-delivery-routing",
+    "trace_head": "solver = routing.solver()\n\nfor job in jobs:\n    pickup_index = manager.NodeToIndex(job.pickup_node)\n    dropoff_index = ",
+    "n_identifiers": 33
+  },
+  {
+    "task_id": "pddl-airport-planning",
+    "skill": "pddl-skills",
+    "trace_head": "# Load\nproblem = load_problem(\"domain.pddl\", \"task01.pddl\")\n\n# Generate plan\nplan = generate_plan(problem)\n\n# Validate p",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "pddl-tpp-planning",
+    "skill": "pddl-skills",
+    "trace_head": "# Load\nproblem = load_problem(\"domain.pddl\", \"task01.pddl\")\n\n# Generate plan\nplan = generate_plan(problem)\n\n# Validate p",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "pdf-excel-diff",
+    "skill": "pdf",
+    "trace_head": "from reportlab.lib.pagesizes import letter\nfrom reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBrea",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "powerlifting-coef-calc",
+    "skill": "powerlifting",
+    "trace_head": "",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "pptx-reference-formatting",
+    "skill": "pptx",
+    "trace_head": "# Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides ha",
+    "n_identifiers": 1
+  },
+  {
+    "task_id": "protein-expression-analysis",
+    "skill": "xlsx",
+    "trace_head": "# Using openpyxl to preserve formulas and formatting\nfrom openpyxl import load_workbook\n\n# Load existing file\nwb = load_",
+    "n_identifiers": 12
+  },
+  {
+    "task_id": "python-scala-translation",
+    "skill": "python-scala-collections",
+    "trace_head": "# Python\nkeys = list(dct.keys())\nvalues = list(dct.values())\nitems = list(dct.items())\n\nfor key, value in dct.items():\n ",
+    "n_identifiers": 2
+  },
+  {
+    "task_id": "quantum-numerical-simulation",
+    "skill": "qutip",
+    "trace_head": "# System parameters\nN = 10  # Cavity Fock space\nwc = 1.0  # Cavity frequency\nwa = 1.0  # Atom frequency\ng = 0.05  # Coup",
+    "n_identifiers": 8
+  },
+  {
+    "task_id": "r2r-mpc-control",
+    "skill": "finite-horizon-lqr",
+    "trace_head": "def finite_horizon_lqr(A, B, Q, R, N, x0):\n    nx, nu = A.shape[0], B.shape[1]\n    K = np.zeros((nu, nx, N))\n    P = Q.c",
+    "n_identifiers": 1
+  },
+  {
+    "task_id": "radar-vital-signs",
+    "skill": "radar-signal-processing",
+    "trace_head": "from scipy.signal import decimate\n   phase_ds = decimate(phase, q=int(fs/50), ftype='iir', zero_phase=True)\n   fs_new = ",
+    "n_identifiers": 3
+  },
+  {
+    "task_id": "react-performance-debugging",
+    "skill": "browser-testing",
+    "trace_head": "BAD (sequential - each waits for previous):\n  /api/products    |████████|                        512ms\n  /api/featured  ",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "reserves-at-risk-calc",
+    "skill": "xlsx",
+    "trace_head": "# Using openpyxl to preserve formulas and formatting\nfrom openpyxl import load_workbook\n\n# Load existing file\nwb = load_",
+    "n_identifiers": 12
+  },
+  {
+    "task_id": "sales-pivot-analysis",
+    "skill": "pdf",
+    "trace_head": "import pdfplumber\nimport pandas as pd\n\ncategory_map = {}      # CategoryID -> CategoryName\nproduct_map = {}       # Prod",
+    "n_identifiers": 41
+  },
+  {
+    "task_id": "sec-financial-report",
+    "skill": "13f-analyzer",
+    "trace_head": "python scripts/one_fund_analysis.py \\\n    --quarter 2025-q3 \\\n    --accession_number <accession number assigned in q3> \\",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "setup-fuzzing-py",
+    "skill": "discover-important-function",
+    "trace_head": "1. Build a repository map\n2. Exclude low-value areas\n3. Score files using explainable heuristics\n4. Rank and select\n5. B",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "shock-analysis-demand",
+    "skill": "xlsx",
+    "trace_head": "# Using openpyxl to preserve formulas and formatting\nfrom openpyxl import load_workbook\n\n# Load existing file\nwb = load_",
+    "n_identifiers": 12
+  },
+  {
+    "task_id": "shock-analysis-supply",
+    "skill": "xlsx",
+    "trace_head": "# Using openpyxl to preserve formulas and formatting\nfrom openpyxl import load_workbook\n\n# Load existing file\nwb = load_",
+    "n_identifiers": 12
+  },
+  {
+    "task_id": "simpo-code-reproduction",
+    "skill": "nlp-research-repo-package-installment",
+    "trace_head": "1. **Read the repo dependency files**\n2. **Log the current environment (Python version is critical)**  \n3. **Compare & d",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "software-dependency-audit",
+    "skill": "cvss-score-extraction",
+    "trace_head": "import json\n\ndef get_cvss_score(vuln_data):\n    \"\"\"Extract CVSS v3 score with source priority.\"\"\"\n    cvss = vuln_data.g",
+    "n_identifiers": 11
+  },
+  {
+    "task_id": "spring-boot-jakarta-migration",
+    "skill": "hibernate-upgrade",
+    "trace_head": "# Check for old Criteria API usage\ngrep -r \"session.createCriteria\\|org.hibernate.Criteria\" --include=\"*.java\" .\n\n# Chec",
+    "n_identifiers": 1
+  },
+  {
+    "task_id": "suricata-custom-exfil",
+    "skill": "pcap-triage-tshark",
+    "trace_head": "tshark -r file.pcap -Y http.request \\\n  -T fields -e frame.time -e ip.src -e tcp.srcport -e http.request.method -e http.",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "syzkaller-ppdev-syzlang",
+    "skill": "syz-extract-constants",
+    "trace_head": "# Constants for your syzlang descriptions\narches = 386, amd64, arm, arm64, mips64le, ppc64le, riscv64, s390x\nPPCLAIM = 2",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "threejs-structure-parser",
+    "skill": "obj-exporter",
+    "trace_head": "# Comment\nv x y z        # Vertex position\nvn x y z       # Vertex normal\nf v1 v2 v3     # Face (triangle)\nf v1/vt1/vn1 ",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "threejs-to-obj",
+    "skill": "obj-exporter",
+    "trace_head": "# Comment\nv x y z        # Vertex position\nvn x y z       # Vertex normal\nf v1 v2 v3     # Face (triangle)\nf v1/vt1/vn1 ",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "tictoc-unnecessary-abort-detection",
+    "skill": "transaction-concurrency-control-foundations",
+    "trace_head": "",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "travel-planning",
+    "skill": "search-accommodations",
+    "trace_head": "from search_accommodations import Accommodations\n\nacc = Accommodations()\nresult = acc.run(\"Seattle\")\nprint(result)",
+    "n_identifiers": 1
+  },
+  {
+    "task_id": "video-silence-remover",
+    "skill": "audio-extractor",
+    "trace_head": "# Extract first 10 minutes of audio\npython3 /root/.claude/skills/audio-extractor/scripts/extract_audio.py \\\n    --video ",
+    "n_identifiers": 1
+  },
+  {
+    "task_id": "weighted-gdp-calc",
+    "skill": "xlsx",
+    "trace_head": "# Using openpyxl to preserve formulas and formatting\nfrom openpyxl import load_workbook\n\n# Load existing file\nwb = load_",
+    "n_identifiers": 12
+  },
+  {
+    "task_id": "xlsx-recover-data",
+    "skill": "data-reconciliation",
+    "trace_head": "End = Start × (1 + CAGR/100)^years\nStart = End / (1 + CAGR/100)^years",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "cobol-gl-batch-reconcile",
+    "skill": "comp3-packed-decimal",
+    "trace_head": "PIC S9(11)V99 USAGE COMP-3\n+--+--+--+--+--+--+--+\n|D1|D2|D3|D4|D5|D6|D7|   7 bytes total for 13 digits\n+--+--+--+--+--+-",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "diff-transformer_impl",
+    "skill": "attention-variants-from-papers",
+    "trace_head": "1. Read the paper for invariants, not names.\n2. Build a shape ledger before coding.\n3. Choose the mechanism pattern.\n4. ",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "find-topk-similiar-chemicals",
+    "skill": "pdf",
+    "trace_head": "from reportlab.lib.pagesizes import letter\nfrom reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBrea",
+    "n_identifiers": 4
+  },
+  {
+    "task_id": "gh-repo-analytics",
+    "skill": "gh-cli",
+    "trace_head": "USAGE\n  gh pr <command> [flags]\n\nCORE COMMANDS\n  checkout:   Check out a pull request in git\n  checks:     Show CI statu",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "gpu-cluster-online-scheduling",
+    "skill": "fragmentation-aware-packing",
+    "trace_head": "1. Measure current free capacity by resource type and slot.\n2. Copy the target machine or bin state.\n3. Compute `fragmen",
+    "n_identifiers": 5
+  },
+  {
+    "task_id": "mhc-layer-impl",
+    "skill": "mhc-algorithm",
+    "trace_head": "import torch\nimport torch.nn as nn\nfrom einops import rearrange, einsum\n\ndef sinkhorn_knopp(logits, num_iters=20, tau=0.",
+    "n_identifiers": 50
+  },
+  {
+    "task_id": "nda-playbook-review",
+    "skill": "contract-playbook-review",
+    "trace_head": "1. **Locate** the corresponding provision in the contract (it may not be present at all).\n2. **Apply** the rule — check ",
+    "n_identifiers": 1
+  },
+  {
+    "task_id": "pedestrian-traffic-counting",
+    "skill": "gemini-count-in-video",
+    "trace_head": "from google import genai\nimport os\nimport time\nimport re\n\ndef upload_and_wait(client, file_path: str, max_wait_s: int = ",
+    "n_identifiers": 18
+  },
+  {
+    "task_id": "pg-essay-to-audiobook",
+    "skill": "audiobook",
+    "trace_head": "import requests\n\ndef create_with_elevenlabs(text, output_path):\n    \"\"\"Generate audiobook using ElevenLabs API.\"\"\"\n    a",
+    "n_identifiers": 24
+  },
+  {
+    "task_id": "scheduling-email-assistant",
+    "skill": "constraint-parser",
+    "trace_head": "",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "speaker-diarization-subtitles",
+    "skill": "automatic-speech-recognition",
+    "trace_head": "# After diarization, you have turns with speaker labels\nturns = [\n    {'start': 0.8, 'duration': 0.86, 'speaker': 'SPEAK",
+    "n_identifiers": 14
+  },
+  {
+    "task_id": "taxonomy-tree-merge",
+    "skill": "hierarchical-taxonomy-clustering",
+    "trace_head": "pip install pandas numpy scipy sentence-transformers nltk tqdm\npython -c \"import nltk; nltk.download('wordnet'); nltk.do",
+    "n_identifiers": 0
+  },
+  {
+    "task_id": "video-filler-word-remover",
+    "skill": "ffmpeg-video-editing",
+    "trace_head": "import subprocess\nimport os\n\ndef remove_segments(input_file, segments_to_remove, output_file):\n    \"\"\"\n    segments_to_r",
+    "n_identifiers": 37
+  },
+  {
+    "task_id": "video-tutorial-indexer",
+    "skill": "speech-to-text",
+    "trace_head": "python3 scripts/transcribe.py /root/tutorial_video.mp4 -o transcript.txt --model tiny",
+    "n_identifiers": 1
+  }
+]

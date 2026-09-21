@@ -1,0 +1,440 @@
+{
+  "clean_gt": {
+    "3d-scan-calc": 1,
+    "dialogue-parser": 1,
+    "lab-unit-harmonization": 0,
+    "citation-check": 1,
+    "econ-detrending-correlation": 1,
+    "enterprise-information-search": 0,
+    "manufacturing-codebook-normalization": 0,
+    "manufacturing-fjsp-optimization": 0,
+    "offer-letter-generator": 1,
+    "pddl-airport-planning": 0,
+    "pddl-tpp-planning": 1,
+    "pptx-reference-formatting": 1,
+    "dapt-intrusion-detection": 1,
+    "exceltable-in-ppt": 1,
+    "financial-modeling-qa": 0,
+    "flood-risk-analysis": 1,
+    "manufacturing-equipment-maintenance": 0,
+    "paper-anonymizer": 1,
+    "travel-planning": 0,
+    "video-silence-remover": 0,
+    "xlsx-recover-data": 0,
+    "nda-playbook-review": 1,
+    "exoplanet-detection-period": 1,
+    "llm-prefix-cache-replay": 1,
+    "parallel-tfidf-search": 1,
+    "find-topk-similiar-chemicals": 0,
+    "court-form-filling": 1,
+    "ada-bathroom-plan-repair": 0,
+    "energy-market-pricing": 1,
+    "grid-dispatch-operator": 1,
+    "sales-pivot-analysis": 0
+  },
+  "rows": [
+    {
+      "combo": "S2+S4",
+      "acc": 0.742,
+      "f1": 0.765,
+      "mcc": 0.485,
+      "cf": [
+        13,
+        3,
+        5,
+        10
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S3+S4",
+      "acc": 0.677,
+      "f1": 0.722,
+      "mcc": 0.338,
+      "cf": [
+        13,
+        5,
+        5,
+        8
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S2+S4",
+      "acc": 0.677,
+      "f1": 0.706,
+      "mcc": 0.354,
+      "cf": [
+        12,
+        4,
+        6,
+        9
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S2+S3+S4",
+      "acc": 0.677,
+      "f1": 0.706,
+      "mcc": 0.354,
+      "cf": [
+        12,
+        4,
+        6,
+        9
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S4+S5",
+      "acc": 0.613,
+      "f1": 0.647,
+      "mcc": 0.224,
+      "cf": [
+        11,
+        5,
+        7,
+        8
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S3+S4+S5",
+      "acc": 0.613,
+      "f1": 0.647,
+      "mcc": 0.224,
+      "cf": [
+        11,
+        5,
+        7,
+        8
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S2",
+      "acc": 0.581,
+      "f1": 0.629,
+      "mcc": 0.148,
+      "cf": [
+        11,
+        6,
+        7,
+        7
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S4",
+      "acc": 0.581,
+      "f1": 0.629,
+      "mcc": 0.148,
+      "cf": [
+        11,
+        6,
+        7,
+        7
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S3+S4",
+      "acc": 0.581,
+      "f1": 0.629,
+      "mcc": 0.148,
+      "cf": [
+        11,
+        6,
+        7,
+        7
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S2+S3+S4",
+      "acc": 0.613,
+      "f1": 0.625,
+      "mcc": 0.246,
+      "cf": [
+        10,
+        4,
+        8,
+        9
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S2+S3+S4+S5",
+      "acc": 0.613,
+      "f1": 0.625,
+      "mcc": 0.246,
+      "cf": [
+        10,
+        4,
+        8,
+        9
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S2+S3",
+      "acc": 0.548,
+      "f1": 0.611,
+      "mcc": 0.073,
+      "cf": [
+        11,
+        7,
+        7,
+        6
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S2+S3",
+      "acc": 0.581,
+      "f1": 0.606,
+      "mcc": 0.169,
+      "cf": [
+        10,
+        5,
+        8,
+        8
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S2+S5",
+      "acc": 0.581,
+      "f1": 0.606,
+      "mcc": 0.169,
+      "cf": [
+        10,
+        5,
+        8,
+        8
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S4",
+      "acc": 0.645,
+      "f1": 0.593,
+      "mcc": 0.4,
+      "cf": [
+        8,
+        1,
+        10,
+        12
+      ],
+      "type": "单方案"
+    },
+    {
+      "combo": "S2+S3+S5",
+      "acc": 0.548,
+      "f1": 0.588,
+      "mcc": 0.093,
+      "cf": [
+        10,
+        6,
+        8,
+        7
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S4+S5",
+      "acc": 0.581,
+      "f1": 0.581,
+      "mcc": 0.192,
+      "cf": [
+        9,
+        4,
+        9,
+        9
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S2+S4+S5",
+      "acc": 0.581,
+      "f1": 0.581,
+      "mcc": 0.192,
+      "cf": [
+        9,
+        4,
+        9,
+        9
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S2+S3+S4+S5",
+      "acc": 0.581,
+      "f1": 0.581,
+      "mcc": 0.192,
+      "cf": [
+        9,
+        4,
+        9,
+        9
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S3",
+      "acc": 0.548,
+      "f1": 0.563,
+      "mcc": 0.114,
+      "cf": [
+        9,
+        5,
+        9,
+        8
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S2+S3+S5",
+      "acc": 0.548,
+      "f1": 0.563,
+      "mcc": 0.114,
+      "cf": [
+        9,
+        5,
+        9,
+        8
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S2+S4+S5",
+      "acc": 0.581,
+      "f1": 0.552,
+      "mcc": 0.22,
+      "cf": [
+        8,
+        3,
+        10,
+        10
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S5",
+      "acc": 0.516,
+      "f1": 0.545,
+      "mcc": 0.038,
+      "cf": [
+        9,
+        6,
+        9,
+        7
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1+S3+S5",
+      "acc": 0.516,
+      "f1": 0.545,
+      "mcc": 0.038,
+      "cf": [
+        9,
+        6,
+        9,
+        7
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S3+S4+S5",
+      "acc": 0.516,
+      "f1": 0.545,
+      "mcc": 0.038,
+      "cf": [
+        9,
+        6,
+        9,
+        7
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S2+S5",
+      "acc": 0.548,
+      "f1": 0.533,
+      "mcc": 0.139,
+      "cf": [
+        8,
+        4,
+        10,
+        9
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S1",
+      "acc": 0.516,
+      "f1": 0.516,
+      "mcc": 0.06,
+      "cf": [
+        8,
+        5,
+        10,
+        8
+      ],
+      "type": "单方案"
+    },
+    {
+      "combo": "S2",
+      "acc": 0.548,
+      "f1": 0.5,
+      "mcc": 0.167,
+      "cf": [
+        7,
+        3,
+        11,
+        10
+      ],
+      "type": "单方案"
+    },
+    {
+      "combo": "S3+S5",
+      "acc": 0.452,
+      "f1": 0.485,
+      "mcc": -0.093,
+      "cf": [
+        8,
+        7,
+        10,
+        6
+      ],
+      "type": "融合(th=0.0)"
+    },
+    {
+      "combo": "S3",
+      "acc": 0.452,
+      "f1": 0.414,
+      "mcc": -0.053,
+      "cf": [
+        6,
+        5,
+        12,
+        8
+      ],
+      "type": "单方案"
+    },
+    {
+      "combo": "S5",
+      "acc": 0.355,
+      "f1": 0.231,
+      "mcc": -0.246,
+      "cf": [
+        3,
+        5,
+        15,
+        8
+      ],
+      "type": "单方案"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "fp": [
+    "pddl-tpp-planning",
+    "flood-risk-analysis",
+    "travel-planning",
+    "ada-bathroom-plan-repair",
+    "sales-pivot-analysis"
+  ],
+  "fn": [
+    "citation-check",
+    "nda-playbook-review",
+    "llm-prefix-cache-replay",
+    "energy-market-pricing",
+    "grid-dispatch-operator"
+  ]
+}

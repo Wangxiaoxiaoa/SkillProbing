@@ -42,13 +42,21 @@ def _copy_environment_inputs(task_dir: Path, workspace: Path) -> None:
 
 
 def _prepare_verifier_script(verifier_dir: Path, workspace: Path) -> Path:
-    """复制 verifier 脚本到临时目录,并把 /root/ 替换为 workspace 路径。"""
+    """复制 verifier 脚本到临时目录,并把沙箱硬编码路径替换为实际 workspace 路径。
+
+    skillsbench 容器内常见约定: /root/, /app/, /workspace/, /output/。
+    本机运行时全部映射到实际 workspace / verifier 目录。
+    """
     tmp = Path(tempfile.mkdtemp(prefix="verifier_"))
+    # 把 verifier 目录下所有辅助 .py 一并拷贝, 解决 verifier import 本地模块(如 solution.py)失败
+    for aux in verifier_dir.glob("*.py"):
+        shutil.copy2(aux, tmp / aux.name)
     test_py = verifier_dir / "test_outputs.py"
     text = test_py.read_text(encoding="utf-8")
-    # 替换 skillsbench 沙箱硬编码路径
-    text = text.replace('"/root/', f'"{workspace.as_posix()}/')
-    text = text.replace("'/root/", f"'{workspace.as_posix()}/")
+    ws = workspace.as_posix()
+    for prefix in ("/root/", "/app/", "/workspace/", "/output/"):
+        text = text.replace(f'"{prefix}', f'"{ws}/')
+        text = text.replace(f"'{prefix}", f"'{ws}/")
     # 若脚本里有引用 /verifier/... 的辅助文件也映射
     text = text.replace('"/verifier/', f'"{verifier_dir.as_posix()}/')
     text = text.replace("'/verifier/", f"'{verifier_dir.as_posix()}/")

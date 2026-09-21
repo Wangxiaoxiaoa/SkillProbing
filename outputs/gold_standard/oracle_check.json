@@ -1,0 +1,410 @@
+{
+  "xlsx-recover-data": {
+    "task_id": "xlsx-recover-data",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "...................                                                      [100%]\n19 passed in 0.49s\n",
+    "solve_rc": 0,
+    "elapsed": 0.4
+  },
+  "video-silence-remover": {
+    "task_id": "video-silence-remover",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": ".........                                                                [100%]\n9 passed in 2.65s\n",
+    "solve_rc": 0,
+    "elapsed": 20.0
+  },
+  "manufacturing-fjsp-optimization": {
+    "task_id": "manufacturing-fjsp-optimization",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "...............                                                          [100%]\n15 passed in 0.03s\n",
+    "solve_rc": 0,
+    "elapsed": 0.0
+  },
+  "enterprise-information-search": {
+    "task_id": "enterprise-information-search",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": ".....                                                                    [100%]\n5 passed in 0.01s\n",
+    "solve_rc": 0,
+    "elapsed": 0.2
+  },
+  "pddl-tpp-planning": {
+    "task_id": "pddl-tpp-planning",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "..                                                                       [100%]\n2 passed in 1.12s\n",
+    "solve_rc": 0,
+    "elapsed": 1.4
+  },
+  "financial-modeling-qa": {
+    "task_id": "financial-modeling-qa",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "....                                                                     [100%]\n4 passed in 0.01s\n",
+    "solve_rc": 0,
+    "elapsed": 3.4
+  },
+  "ada-bathroom-plan-repair": {
+    "task_id": "ada-bathroom-plan-repair",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "shapely/decorators.py:173: DeprecationWarning: The 'resolution' argument is deprecated. Use 'quad_segs' instead\n    result = func(*args, **kwargs)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n6 passed, 2 warnings in 0.43s\n",
+    "solve_rc": 0,
+    "elapsed": 0.6
+  },
+  "pddl-airport-planning": {
+    "task_id": "pddl-airport-planning",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "..                                                                       [100%]\n2 passed in 4.48s\n",
+    "solve_rc": 0,
+    "elapsed": 3.0
+  },
+  "manufacturing-equipment-maintenance": {
+    "task_id": "manufacturing-equipment-maintenance",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": ".......                                                                  [100%]\n7 passed in 4.06s\n",
+    "solve_rc": 0,
+    "elapsed": 4.4
+  },
+  "sales-pivot-analysis": {
+    "task_id": "sales-pivot-analysis",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "........sss...............                                               [100%]\n23 passed, 3 skipped in 0.42s\n",
+    "solve_rc": 0,
+    "elapsed": 5.5
+  },
+  "manufacturing-codebook-normalization": {
+    "task_id": "manufacturing-codebook-normalization",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "................                                                         [100%]\n16 passed in 1.68s\n",
+    "solve_rc": 0,
+    "elapsed": 25.8
+  },
+  "find-topk-similiar-chemicals": {
+    "task_id": "find-topk-similiar-chemicals",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "..                                                                       [100%]\n2 passed in 74.77s (0:01:14)\n",
+    "solve_rc": 0,
+    "elapsed": 0.0
+  },
+  "flood-risk-analysis": {
+    "task_id": "flood-risk-analysis",
+    "oracle_ok": true,
+    "verifier_passed": true,
+    "detail": "..                                                                       [100%]\n2 passed in 0.01s\n",
+    "solve_rc": 0,
+    "elapsed": 0.0
+  },
+  "flink-query": {
+    "task_id": "flink-query",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "50_n7dcl/test_outputs.py::test_maven_build\nFAILED ../../../../../../../../tmp/verifier_50_n7dcl/test_outputs.py::test_flink_job_runs\nFAILED ../../../../../../../../tmp/verifier_50_n7dcl/test_outputs.py::test_output_matches_expected\n3 failed in 0.02s\n",
+    "solve_rc": 0,
+    "elapsed": 0.0
+  },
+  "shock-analysis-demand": {
+    "task_id": "shock-analysis-demand",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "d_sheets_exist\nFAILED ../../../../../../../../tmp/verifier_f0qv0unr/test_outputs.py::test_weo_data_has_formulas\nFAILED ../../../../../../../../tmp/verifier_f0qv0unr/test_outputs.py::test_sut_calc_formulas_and_import_share\n3 failed, 4 passed in 0.40s\n",
+    "solve_rc": 0,
+    "elapsed": 0.0
+  },
+  "gravitational-wave-detection": {
+    "task_id": "gravitational-wave-detection",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "ssertionError\n=========================== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_97v4bd05/test_outputs.py::TestGravitationalWaveDetection::test_output_file_exists\n1 failed, 8 skipped in 0.25s\n",
+    "solve_rc": 2,
+    "elapsed": 0.0
+  },
+  "protein-expression-analysis": {
+    "task_id": "protein-expression-analysis",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "p2_statistics_calculated\nERROR ../../../../../../../../tmp/verifier_17aekzu6/test_outputs.py::test_step3_fold_changes_calculated\nERROR ../../../../../../../../tmp/verifier_17aekzu6/test_outputs.py::test_values_are_numeric\n1 failed, 5 errors in 0.22s\n",
+    "solve_rc": 1,
+    "elapsed": 0.4
+  },
+  "lean4-proof": {
+    "task_id": "lean4-proof",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "y::test_solution_prefix_exact\nFAILED ../../../../../../../../tmp/verifier_w49qg6fw/test_outputs.py::test_no_changes_outside_solution\nFAILED ../../../../../../../../tmp/verifier_w49qg6fw/test_outputs.py::test_typecheck_on_clean_tree\n4 failed in 0.05s\n",
+    "solve_rc": 0,
+    "elapsed": 0.0
+  },
+  "hvac-control": {
+    "task_id": "hvac-control",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "uts.py::TestMetrics::test_metrics\nFAILED ../../../../../../../../tmp/verifier_52l4uzj5/test_outputs.py::TestPerformance::test_performance\nFAILED ../../../../../../../../tmp/verifier_52l4uzj5/test_outputs.py::TestSafety::test_safety\n7 failed in 0.19s\n",
+    "solve_rc": 1,
+    "elapsed": 0.6
+  },
+  "invoice-fraud-detection": {
+    "task_id": "invoice-fraud-detection",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "hqto6f/test_outputs.py:21: FileNotFoundError\n=========================== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_y_hqto6f/test_outputs.py::TestOutputs::test_content\n1 failed, 1 passed in 0.04s\n",
+    "solve_rc": 0,
+    "elapsed": 0.7
+  },
+  "simpo-code-reproduction": {
+    "task_id": "simpo-code-reproduction",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": " os.path\n\n/tmp/verifier_ecp2wruy/test_outputs.py:18: AssertionError\n=========================== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_ecp2wruy/test_outputs.py::test_outputs\n1 failed in 0.09s\n",
+    "solve_rc": 100,
+    "elapsed": 0.0
+  },
+  "software-dependency-audit": {
+    "task_id": "software-dependency-audit",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "./../../tmp/verifier_etz3r7zx/test_outputs.py::TestSecurityAuditTask::test_vulnerability_severity_and_format\nFAILED ../../../../../../../../tmp/verifier_etz3r7zx/test_outputs.py::TestSecurityAuditTask::test_csv_matches_ground_truth\n7 failed in 0.05s\n",
+    "solve_rc": 1,
+    "elapsed": 0.0
+  },
+  "lake-warming-attribution": {
+    "task_id": "lake-warming-attribution",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "LED ../../../../../../../../tmp/verifier_a5ew3yfs/test_outputs.py::TestLakeWarmingAttribution::test_trend_result\nFAILED ../../../../../../../../tmp/verifier_a5ew3yfs/test_outputs.py::TestLakeWarmingAttribution::test_dominant_factor\n2 failed in 0.02s\n",
+    "solve_rc": 1,
+    "elapsed": 1.1
+  },
+  "shock-analysis-supply": {
+    "task_id": "shock-analysis-supply",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "ment_and_capital_accumulation\nFAILED ../../../../../../../../tmp/verifier_bvfj1byg/test_outputs.py::test_ky_ratio_and_k_extension\nFAILED ../../../../../../../../tmp/verifier_bvfj1byg/test_outputs.py::test_value_magnitudes\n8 failed, 1 passed in 1.29s\n",
+    "solve_rc": 1,
+    "elapsed": 0.0
+  },
+  "jax-computing-basics": {
+    "task_id": "jax-computing-basics",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "../../../../../../../../tmp/verifier_sppv3yw0/test_outputs.py::TestOutputShapes::test_shapes_match\nFAILED ../../../../../../../../tmp/verifier_sppv3yw0/test_outputs.py::TestNumericalCorrectness::test_allclose[1e-05-1e-06]\n3 failed, 2 passed in 0.12s\n",
+    "solve_rc": 0,
+    "elapsed": 1.5
+  },
+  "spring-boot-jakarta-migration": {
+    "task_id": "spring-boot-jakarta-migration",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "ILED ../../../../../../../../tmp/verifier_sk1dtofg/test_outputs.py::TestDependencyUpdates::test_no_old_jaxb_api\nFAILED ../../../../../../../../tmp/verifier_sk1dtofg/test_outputs.py::TestDependencyUpdates::test_no_old_jjwt\n9 failed, 1 passed in 0.23s\n",
+    "solve_rc": 1,
+    "elapsed": 0.0
+  },
+  "debug-trl-grpo": {
+    "task_id": "debug-trl-grpo",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "puts.py::test_trl_source_exists\nFAILED ../../../../../../../../tmp/verifier_bcjpczuk/test_outputs.py::test_train_script_not_modified\nFAILED ../../../../../../../../tmp/verifier_bcjpczuk/test_outputs.py::test_reward_fn_not_modified\n12 failed in 1.11s\n",
+    "solve_rc": 1,
+    "elapsed": 0.2
+  },
+  "pdf-excel-diff": {
+    "task_id": "pdf-excel-diff",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "\nFAILED ../../../../../../../../tmp/verifier_5bbtm3t_/test_outputs.py::TestModifiedEmployees::test_correct_modified_values\nFAILED ../../../../../../../../tmp/verifier_5bbtm3t_/test_outputs.py::TestIntegration::test_full_comparison\n11 failed in 0.16s\n",
+    "solve_rc": 1,
+    "elapsed": 0.5
+  },
+  "sec-financial-report": {
+    "task_id": "sec-financial-report",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "= short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_2bkyvz3b/test_outputs.py::test_file_exists\nFAILED ../../../../../../../../tmp/verifier_2bkyvz3b/test_outputs.py::test_answer_quality\n2 failed in 0.02s\n",
+    "solve_rc": 1,
+    "elapsed": 0.6
+  },
+  "threejs-structure-parser": {
+    "task_id": "threejs-structure-parser",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "/../../../../../../tmp/verifier_piiab2lx/test_outputs.py::TestMeshExport::test_part_meshes_match_ground_truth\nFAILED ../../../../../../../../tmp/verifier_piiab2lx/test_outputs.py::TestMeshExport::test_link_meshes_match_ground_truth\n3 failed in 0.10s\n",
+    "solve_rc": 1,
+    "elapsed": 0.0
+  },
+  "threejs-to-obj": {
+    "task_id": "threejs-to-obj",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "ists\nFAILED ../../../../../../../../tmp/verifier_qhkumd_g/test_outputs.py::TestObjExport::test_obj_format_valid\nFAILED ../../../../../../../../tmp/verifier_qhkumd_g/test_outputs.py::TestObjExport::test_geometry_matches_ground_truth\n3 failed in 0.10s\n",
+    "solve_rc": 1,
+    "elapsed": 0.0
+  },
+  "syzkaller-ppdev-syzlang": {
+    "task_id": "syzkaller-ppdev-syzlang",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "D ../../../../../../../../tmp/verifier_se616bwb/test_outputs.py::TestConstantValues::test_ioctl_and_mode_constant_values\nFAILED ../../../../../../../../tmp/verifier_se616bwb/test_outputs.py::TestSyzkallerBuild::test_build_syzkaller\n7 failed in 0.21s\n",
+    "solve_rc": 1,
+    "elapsed": 0.0
+  },
+  "adaptive-cruise-control": {
+    "task_id": "adaptive-cruise-control",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "5: PermissionError\n=========================== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_s98s9h_t/test_outputs.py::TestSimulationExecution::test_simulation_execution\n1 failed, 11 passed in 0.85s\n",
+    "solve_rc": 0,
+    "elapsed": 1.1
+  },
+  "scheduling-email-assistant": {
+    "task_id": "scheduling-email-assistant",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "=== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_1teueg3q/test_outputs.py::test_outputs\nFAILED ../../../../../../../../tmp/verifier_1teueg3q/test_outputs.py::test_email_recipients\n2 failed in 0.07s\n",
+    "solve_rc": 1,
+    "elapsed": 0.1
+  },
+  "azure-bgp-oscillation-route-leak": {
+    "task_id": "azure-bgp-oscillation-route-leak",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "./../../../../../tmp/verifier_fu4gtje4/test_outputs.py::TestSolutionEvaluation::test_solution_classification[Enable Virtual WAN hub routing intent to enforce all hub-to-hub routes go through Virtual WAN (ASN 65001) only-True-True]\n22 errors in 0.07s\n",
+    "solve_rc": 1,
+    "elapsed": 0.1
+  },
+  "tictoc-unnecessary-abort-detection": {
+    "task_id": "tictoc-unnecessary-abort-detection",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "_4o/test_outputs.py::TestTicTocUnnecessaryAbortDetection::test_output_is_json_integer_array\nFAILED ../../../../../../../../tmp/verifier_aamh8_4o/test_outputs.py::TestTicTocUnnecessaryAbortDetection::test_output_is_sorted_and_unique\n3 failed in 0.02s\n",
+    "solve_rc": 1,
+    "elapsed": 0.2
+  },
+  "r2r-mpc-control": {
+    "task_id": "r2r-mpc-control",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "uts.py::TestMetrics::test_metrics\nFAILED ../../../../../../../../tmp/verifier_9f4p11s7/test_outputs.py::TestPerformance::test_performance\nFAILED ../../../../../../../../tmp/verifier_9f4p11s7/test_outputs.py::TestSafety::test_safety\n6 failed in 0.15s\n",
+    "solve_rc": 1,
+    "elapsed": 0.4
+  },
+  "earthquake-plate-calculation": {
+    "task_id": "earthquake-plate-calculation",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "159: AssertionError\n=========================== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_95ji88jl/test_outputs.py::TestEarthquakeTask::test_distance_within_tolerance\n1 failed, 7 passed in 0.02s\n",
+    "solve_rc": 0,
+    "elapsed": 0.7
+  },
+  "pedestrian-traffic-counting": {
+    "task_id": "pedestrian-traffic-counting",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "ll -----------------------------\ncount.xlsx not found at /app/video\n=========================== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_3hlio5bm/test_outputs.py::test_outputs\n1 failed in 0.43s\n",
+    "solve_rc": 1,
+    "elapsed": 0.3
+  },
+  "fix-build-agentops": {
+    "task_id": "fix-build-agentops",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "tmp/verifier_8_vmol72/test_outputs.py::test_note_exists\nFAILED ../../../../../../../../tmp/verifier_8_vmol72/test_outputs.py::test_diff_exists\nFAILED ../../../../../../../../tmp/verifier_8_vmol72/test_outputs.py::test_build_success\n3 failed in 0.03s\n",
+    "solve_rc": 0,
+    "elapsed": 0.4
+  },
+  "gpu-cluster-online-scheduling": {
+    "task_id": "gpu-cluster-online-scheduling",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "./../../../tmp/verifier_edzgwygn/test_outputs.py::TestScheduler::test_objective_quality[trace_path0]\nFAILED ../../../../../../../../tmp/verifier_edzgwygn/test_outputs.py::TestScheduler::test_objective_quality[trace_path1]\n6 failed, 1 passed in 0.07s\n",
+    "solve_rc": 1,
+    "elapsed": 0.1
+  },
+  "python-scala-translation": {
+    "task_id": "python-scala-translation",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "t_outputs.py:56: PytestCollectionWarning: cannot collect test class 'TestResult' because it has a __init__ constructor (from: test_outputs.py)\n    @dataclass\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 warning in 0.03s\n",
+    "solve_rc": 0,
+    "elapsed": 0.0
+  },
+  "glm-lake-mendota": {
+    "task_id": "glm-lake-mendota",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "est_glm_runs\nFAILED ../../../../../../../../tmp/verifier_p2_f1tti/test_outputs.py::TestGLMCalibration::test_output_exists\nFAILED ../../../../../../../../tmp/verifier_p2_f1tti/test_outputs.py::TestGLMCalibration::test_rmse_threshold\n3 failed in 0.32s\n",
+    "solve_rc": 1,
+    "elapsed": 0.8
+  },
+  "suricata-custom-exfil": {
+    "task_id": "suricata-custom-exfil",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "../../../../../../tmp/verifier_2zk6yosd/test_outputs.py::TestGeneratedPcaps::test_generated_pos_3\nFAILED ../../../../../../../../tmp/verifier_2zk6yosd/test_outputs.py::TestRuleQuality::test_rule_is_not_trivially_overbroad\n7 failed, 5 passed in 2.70s\n",
+    "solve_rc": 1,
+    "elapsed": 0.1
+  },
+  "mario-coin-counting": {
+    "task_id": "mario-coin-counting",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "t_outputs.py:20: AssertionError\n=========================== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_8qxoghqu/test_outputs.py::TestFileExists::test_grayscale_applied\n1 failed, 2 passed in 0.36s\n",
+    "solve_rc": 0,
+    "elapsed": 6.0
+  },
+  "weighted-gdp-calc": {
+    "task_id": "weighted-gdp-calc",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "./tmp/verifier_s7f74m3n/test_outputs.py::TestStep3WeightedMean::test_weighted_mean_values_reasonable\nFAILED ../../../../../../../../tmp/verifier_s7f74m3n/test_outputs.py::TestStep3WeightedMean::test_weighted_mean_values\n17 failed, 10 passed in 7.91s\n",
+    "solve_rc": 0,
+    "elapsed": 1.0
+  },
+  "reserves-at-risk-calc": {
+    "task_id": "reserves-at-risk-calc",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "x/test_outputs.py::test_step3_rar_percentage\nFAILED ../../../../../../../../tmp/verifier_li57qyqx/test_outputs.py::test_formulas_present\nFAILED ../../../../../../../../tmp/verifier_li57qyqx/test_outputs.py::test_no_errors_or_macros\n5 failed in 0.22s\n",
+    "solve_rc": 0,
+    "elapsed": 17.2
+  },
+  "fix-visual-stability": {
+    "task_id": "fix-visual-stability",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "der\nFAILED ../../../../../../../../tmp/verifier_xbf7azfb/test_outputs.py::TestFontLoading::test_foit_prevented\nFAILED ../../../../../../../../tmp/verifier_xbf7azfb/test_outputs.py::TestImageDimensions::test_images_no_cls\n4 failed, 2 passed in 23.53s\n",
+    "solve_rc": 254,
+    "elapsed": 3.5
+  },
+  "drone-planning-control": {
+    "task_id": "drone-planning-control",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "30']\nFailed     : []\n=========================== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_fi4qs4bh/test_outputs.py::TestSuccessCount::test_count_successful_commands\n1 failed, 10 passed in 2.46s\n",
+    "solve_rc": 0,
+    "elapsed": 87.2
+  },
+  "setup-fuzzing-py": {
+    "task_id": "setup-fuzzing-py",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "exit=0 reward=0.0",
+    "solve_rc": 1,
+    "elapsed": 0.0
+  },
+  "jpg-ocr-stat": {
+    "task_id": "jpg-ocr-stat",
+    "oracle_ok": false,
+    "verifier_passed": false,
+    "detail": "x'\n\n/usr/lib/python3.12/zipfile/__init__.py:1347: FileNotFoundError\n=========================== short test summary info ============================\nFAILED ../../../../../../../../tmp/verifier_ity6afsk/test_outputs.py::test_outputs\n1 failed in 0.23s\n",
+    "solve_rc": 0,
+    "elapsed": 119.9
+  }
+}

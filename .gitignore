@@ -8,3 +8,10 @@ outputs/
 *.jsonl
 .verification_workspace/
 .verify_workspace/
+
+# probe_lab 实验运行残留(任务数据, 非代码)
+probe_lab/data/
+probe_lab/input/
+probe_lab/output/
+probe_lab/output_schema/
+probe_lab/__pycache__/
