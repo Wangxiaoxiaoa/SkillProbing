@@ -11,11 +11,10 @@ from pathlib import Path
 SB = Path("/data1/xiao/skillsbench")
 
 UV_BLOCK = """
-# [env-adapt] preinstall uv globally (test.sh installs it at runtime, which is
-# unreliable behind restricted networks; build-time has proxy build-args)
-RUN curl -LsSf https://astral.sh/uv/0.9.7/install.sh | sh \\
- && cp /root/.local/bin/uv /usr/local/bin/uv \\
- && cp /root/.local/bin/uvx /usr/local/bin/uvx
+# [env-adapt] preinstall uv via PyPI (GitHub unreachable in this network;
+# PyPI is reachable. uv+uvx land in /usr/local/bin, visible to all users)
+RUN pip3 install --break-system-packages uv \
+ || pip install --break-system-packages uv
 """
 
 
